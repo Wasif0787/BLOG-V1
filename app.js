@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const lodash = require("lodash")
+const port =process.env.PORT || 3000;
 let posts = [];
 
 const homeStartingContent = "Welcome to our blog, a virtual canvas where curiosity takes the lead. Immerse yourself in a realm of captivating narratives, insightful explorations, and thought-provoking discussions. With each post, we embark on a quest to unravel mysteries, celebrate creativity, and deepen our understanding of the world around us.From the mesmerizing dance of distant galaxies to the rich tapestry of human history, our blog is a gateway to endless inspiration. Join us as we navigate the realms of science, art, culture, and beyond. As you embark on this journey, let your imagination roam free and your intellect flourish.Here, we invite you to not only be a reader but an active participant. Engage in conversations, share your thoughts, and let your curiosity guide you. Together, we'll embark on an exhilarating expedition of knowledge and discovery. Welcome to our blog, where the extraordinary awaits your exploration.";
@@ -54,6 +55,6 @@ app.post("/compose", function (req, res) {
 })
 
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log("Server started on port 3000");
 });
